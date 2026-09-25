@@ -57430,3 +57430,35 @@ impl<'a> PhysicalDeviceRawAccessChainsFeaturesNV<'a> {
         self
     }
 }
+
+#[repr(C)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[derive(Copy, Clone)]
+#[doc = "<https://registry.khronos.org/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderFloat8FeaturesEXT.html>"]
+#[must_use]
+pub struct PhysicalDeviceShaderFloat8FeaturesEXT<'a> {
+    pub s_type: StructureType,
+    pub p_next: *mut c_void,
+    pub shader_float8: Bool32,
+    pub shader_float8_cooperative_matrix: Bool32,
+    pub _marker: PhantomData<&'a ()>,
+}
+unsafe impl Send for PhysicalDeviceShaderFloat8FeaturesEXT<'_> {}
+unsafe impl Sync for PhysicalDeviceShaderFloat8FeaturesEXT<'_> {}
+impl ::core::default::Default for PhysicalDeviceShaderFloat8FeaturesEXT<'_> {
+    #[inline]
+    fn default() -> Self {
+        Self {
+            s_type: Self::STRUCTURE_TYPE,
+            p_next: ::core::ptr::null_mut(),
+            shader_float8: Bool32::default(),
+            shader_float8_cooperative_matrix: Bool32::default(),
+            _marker: PhantomData,
+        }
+    }
+}
+unsafe impl<'a> TaggedStructure for PhysicalDeviceShaderFloat8FeaturesEXT<'a> {
+    const STRUCTURE_TYPE: StructureType =
+        StructureType::PHYSICAL_DEVICE_SHADER_FLOAT8_FEATURES_EXT;
+}
+unsafe impl ExtendsPhysicalDeviceFeatures2 for PhysicalDeviceShaderFloat8FeaturesEXT<'_> {}

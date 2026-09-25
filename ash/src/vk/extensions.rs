@@ -7881,3 +7881,8 @@ pub const NV_SHADER_ATOMIC_FLOAT16_VECTOR_SPEC_VERSION: u32 = 1u32;
 pub const NV_RAY_TRACING_VALIDATION_NAME: &CStr =
     unsafe { CStr::from_bytes_with_nul_unchecked(b"VK_NV_ray_tracing_validation\0") };
 pub const NV_RAY_TRACING_VALIDATION_SPEC_VERSION: u32 = 1u32;
+
+#[doc = "Generated from 'VK_EXT_shader_float8'"]
+impl StructureType {
+    pub const PHYSICAL_DEVICE_SHADER_FLOAT8_FEATURES_EXT: Self = Self(1_000_567_000);
+}

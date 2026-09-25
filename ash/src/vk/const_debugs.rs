@@ -6950,6 +6950,9 @@ impl fmt::Debug for StructureType {
             }
             Self::DEVICE_BUFFER_MEMORY_REQUIREMENTS => Some("DEVICE_BUFFER_MEMORY_REQUIREMENTS"),
             Self::DEVICE_IMAGE_MEMORY_REQUIREMENTS => Some("DEVICE_IMAGE_MEMORY_REQUIREMENTS"),
+            Self::PHYSICAL_DEVICE_SHADER_FLOAT8_FEATURES_EXT => {
+                Some("PHYSICAL_DEVICE_SHADER_FLOAT8_FEATURES_EXT")
+            }
             _ => None,
         };
         if let Some(x) = name {
